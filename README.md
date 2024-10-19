@@ -20,3 +20,26 @@ lea     rcx, _init_proc
 lea     rdi, sub_404930
 jmp     loc_44F6DE
 start endp
+
+
+
+
+进去之后
+sub_404930 proc near
+
+var_8= qword ptr -8
+
+; __unwind {
+push    rax
+mov     rcx, rsi
+movsxd  rdx, edi
+lea     rax, sub_403860
+mov     [rsp+8+var_8], rax
+lea     rsi, unk_52F400
+mov     rdi, rsp
+xor     r8d, r8d
+call    cs:off_531C08
+pop     rcx
+retn
+; } // starts at 404930
+sub_404930 endp
